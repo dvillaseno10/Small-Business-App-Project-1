@@ -2,6 +2,7 @@
 // This program calculates total sale price for a customer shopping at car wash
 #include <iostream>
 #include <fstream>
+#include <vector>
 using namespace std;
 
 //global declaration statements
@@ -10,6 +11,9 @@ double add(int);
 //array which stores prices for services
 double prices[2][4]= {{8.99, 14.99, 18.99, 22.99 }, { 1.50, 5.00, 10.00, 30.00 }};
 double choices;
+//vector stores ID numbers
+vector<string>usrName();
+vector<string>passWrd();
 
 int main()
 {
@@ -17,9 +21,15 @@ int main()
 	int choice = 0;
 	double total = 0;
 	double washes;
+	string UsrName = " ";
+	string passWrd = " ";
 	// prints texts about the car wash to user
 	cout << "\t\tWelcome to A1A car wash!" << endl << "\t'You've tried the rest, now try the best'" << endl << endl;
-	cout << "Our custom washes are listed below\n";
+	cout << "Enter username: ";
+	cin >> UsrName;
+	cout << "Enter password: ";
+	cin >> passWrd;
+	cout << "\nOur custom washes are listed below\n";
 	cout << "------------------------------------\n";
   // Display options 1-4
 	cout << "1.Bronze\t\t$" << prices[0][0] << endl;
@@ -46,7 +56,7 @@ int main()
 			cout << "The total price comes out to : $" << total << endl;
 			break;
 		case 3:
-			cout << "\nGold selected\nThis package includes:\nDeluxe Wash\n*Tire Clean\n*Interior Vacumm\n*Coat Wax\n" << endl;
+			cout << "\nGold selected\nThis package includes:\n*Deluxe Wash\n*Tire Clean\n*Interior Vacumm\n*Coat Wax\n" << endl;
 			total += prices[0][2] * washes;
 			total += add(choices);
 			cout << "The total price comes out to : $" << total << endl;
@@ -63,6 +73,7 @@ int main()
 		//output total to receipt.txt file 
 		ofstream out;
 		out.open("receipt.txt");
+		out << "username: " << UsrName << endl;
 		out << "total: $" << total;
 		out.close();
 }
@@ -79,7 +90,7 @@ double add(int choices)
   		cout << "2. Tire Pump                  $5.00\n";
   		cout << "3. Rotation of Tires          $10.00\n";
   		cout << "4. Oil Change plus Filter     $30.00\n";
-  		cout << "5. No additional features wanted.\n";
+  		cout << "5. No additional features\n";
   		cin >> choices;
   		//if else loop which runs when user inputs numbers 1-4 and ends with 5 when user no longer wants to add anymore features
 		  if(choices == 1)
@@ -117,4 +128,12 @@ double add(int choices)
 
 		}
 		return total;
+}
+//Sort function for ID and Passwords
+string sortPass(string UsrName, string passWrd )
+{
+  int min = " ";
+  int max = " ";
+  tempid = id[string];
+  for (int idex =)
 }
