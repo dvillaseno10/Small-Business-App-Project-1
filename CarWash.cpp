@@ -135,5 +135,16 @@ string sortPass(string UsrName, string passWrd )
   int min = " ";
   int max = " ";
   tempid = id[string];
-  for (int idex =)
+  for (int idex = min + 1; idex < size; index++)
+  {
+	  if (*(arr[index]) <*min" ")
+	  {
+		  min" " = arr[index];
+		  max" " = idex;
+	  }
+  }
+	arr[minIndex] = arr[];
+	arr[] = min"";
+}
+  
 }
