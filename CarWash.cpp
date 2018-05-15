@@ -126,3 +126,24 @@ double add(int choices)
 		}
 		return total;
 }
+void getUsrName(int *);
+void doublepassWard(int *);
+
+int main()
+{
+	int name;
+	getUsrName(&name);
+	doublepassWard(&name);
+	cout << "That passWard doubled is" << name << endl;
+	return 0;
+}
+void getUsrName(int *input)
+{
+	cout << "Enter user name: ";
+	cin >> *input;
+}
+void doublepassWard(int *val)
+{
+	*val *= 2;
+}
+
