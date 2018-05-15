@@ -11,24 +11,21 @@ double add(int);
 //array which stores prices for services
 double prices[2][4]= {{8.99, 14.99, 18.99, 22.99 }, { 1.50, 5.00, 10.00, 30.00 }};
 double choices;
-//vector stores ID numbers
-vector<string>usrName();
-vector<string>passWrd();
-
+string UsrName[4] = {};
+string passWrd[4] = {};
 int main()
 {
   // main declaration statements
 	int choice = 0;
 	double total = 0;
 	double washes;
-	string UsrName = " ";
-	string passWrd = " ";
 	// prints texts about the car wash to user
 	cout << "\t\tWelcome to A1A car wash!" << endl << "\t'You've tried the rest, now try the best'" << endl << endl;
 	cout << "Enter username: ";
-	cin >> UsrName;
+	cin >> UsrName[0];
 	cout << "Enter password: ";
-	cin >> passWrd;
+	cin >> passWrd[0];
+	cout << "\nWelcome " << UsrName[0] << "," << endl;
 	cout << "\nOur custom washes are listed below\n";
 	cout << "------------------------------------\n";
   // Display options 1-4
@@ -128,23 +125,4 @@ double add(int choices)
 
 		}
 		return total;
-}
-//Sort function for ID and Passwords
-string sortPass(string UsrName, string passWrd )
-{
-  int min = " ";
-  int max = " ";
-  tempid = id[string];
-  for (int idex = min + 1; idex < size; index++)
-  {
-	  if (*(arr[index]) <*min" ")
-	  {
-		  min" " = arr[index];
-		  max" " = idex;
-	  }
-  }
-	arr[minIndex] = arr[];
-	arr[] = min"";
-}
-  
 }
