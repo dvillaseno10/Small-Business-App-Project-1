@@ -11,8 +11,8 @@ double add(int);
 //array which stores prices for services
 double prices[2][4]= {{8.99, 14.99, 18.99, 22.99 }, { 1.50, 5.00, 10.00, 30.00 }};
 double choices;
-string UsrName[4] = {};
-int idNum[4] = {};
+string UsrName[100] = {};
+int idNum[100] = {};
 int LogReg = 0;
 int id = 0;
 
@@ -33,11 +33,6 @@ void getinfo()
     ++i;
   }
   in.close();
-}
-
-void RegLog()
-{
-
 }
 
 int main()
