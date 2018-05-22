@@ -1,3 +1,22 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @jessenunez
+Sign out
+0
+0 1 jessenunez/Small-Business-App-Project-1
+forked from dvillaseno10/Small-Business-App-Project-1
+ Code  Pull requests 0  Projects 0  Wiki  Insights  Settings
+Small-Business-App-Project-1/CarWash.cpp
+9728762  a day ago
+@jessenunez jessenunez Update CarWash.cpp
+@jessenunez @dvillaseno10
+      
+151 lines (146 sloc)  4.58 KB
 // Float Charters 
 // This program calculates total sale price for a customer shopping at car wash
 #include <iostream>
@@ -11,21 +30,24 @@ double add(int);
 //array which stores prices for services
 double prices[2][4]= {{8.99, 14.99, 18.99, 22.99 }, { 1.50, 5.00, 10.00, 30.00 }};
 double choices;
-string UsrName[4] = {};
-string passWrd[4] = {};
+//vector stores ID numbers
+vector<string>usrName();
+vector<string>passWrd();
+
 int main()
 {
   // main declaration statements
 	int choice = 0;
 	double total = 0;
 	double washes;
+	string UsrName = " ";
+	string passWrd = " ";
 	// prints texts about the car wash to user
 	cout << "\t\tWelcome to A1A car wash!" << endl << "\t'You've tried the rest, now try the best'" << endl << endl;
 	cout << "Enter username: ";
-	cin >> UsrName[0];
+	cin >> UsrName;
 	cout << "Enter password: ";
-	cin >> passWrd[0];
-	cout << "\nWelcome " << UsrName[0] << "," << endl;
+	cin >> passWrd;
 	cout << "\nOur custom washes are listed below\n";
 	cout << "------------------------------------\n";
   // Display options 1-4
@@ -126,24 +148,35 @@ double add(int choices)
 		}
 		return total;
 }
-void getUsrName(int *);
-void doublepassWard(int *);
-
-int main()
+//Sort function for ID and Passwords
+string sortPass(string UsrName, string passWrd )
 {
-	int name;
-	getUsrName(&name);
-	doublepassWard(&name);
-	cout << "That passWard doubled is" << name << endl;
-	return 0;
+  int min = " ";
+  int max = " ";
+  tempid = id[string];
+  for (int idex = min + 1; idex < size; index++)
+  {
+	  if (*(arr[index]) <*min" ")
+	  {
+		  min" " = arr[index];
+		  max" " = idex;
+	  }
+  }
+	arr[minIndex] = arr[];
+	arr[] = min"";
 }
-void getUsrName(int *input)
-{
-	cout << "Enter user name: ";
-	cin >> *input;
+  
 }
-void doublepassWard(int *val)
-{
-	*val *= 2;
-}
-
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
+Press h to open a hovercard with more details.
