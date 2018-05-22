@@ -7,4 +7,4 @@ An app to help run a small car wash business built for customer use
 -created username and password which we can sort and use for authentication
 
 
--
+-added search function aswell as sort function. Need ptrs and stubs and drivers
