@@ -11,3 +11,6 @@ An app to help run a small car wash business built for customer use
 
 
 -cleaned up the code
+
+
+-fixed errors
