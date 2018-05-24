@@ -7,7 +7,7 @@
 using namespace std;
 
 //global declaration statements
-double * add(int);
+double add(int);
 void welcomePrompt(int*, double*);
 //array which stores prices for services
 double prices[2][4]= {{8.99, 14.99, 18.99, 22.99 }, { 1.50, 5.00, 10.00, 30.00 }};
@@ -17,6 +17,7 @@ int idNum[100] = {};
 double addSer = 0;
 int size = 0;
 int y = 0;
+double total = 0;
 
 void getinfo()
 {
@@ -73,7 +74,6 @@ int main()
 {
 //declaration statements
 	int choice = 0;
-	double total = 0;
 	double washes;
 	int tempID = 0;
   int LogReg = 0;
@@ -130,28 +130,28 @@ int main()
 		cout << "\nBronze selected\nThis package includes:\n*Deluxe Wash\n*Tire Clean\n" << endl;
     out << "Bronze  \t@$" << prices[0][0] << "\t\t$" << prices[0][0] * washes << endl;
 		total += prices[0][0] * washes;
-		total += *add(choices);
+		total += add(choices);
 		cout << "The total price comes out too : $" << total << endl;
 		break;
 	case 2:
 		cout << "\nSilver selected\nThis package includes:\n*Deluxe Wash\n*Tire Clean\n*Interior Vacumm\n" << endl;
     out << "Silver  \t@$" << prices[0][1] << "\t\t$" << prices[0][1] * washes << endl;
 		total += prices[0][1] * washes;
-		total += *add(choices);
+		total += add(choices);
 		cout << "The total price comes out to : $" << total << endl;
 		break;
 	case 3:
 		cout << "\nGold selected\nThis package includes:\n*Deluxe Wash\n*Tire Clean\n*Interior Vacumm\n*Coat Wax\n" << endl;
     out << "Gold    \t@$" << prices[0][2] << "\t\t$" << prices[0][2] * washes << endl;
 		total += prices[0][2] * washes;
-		total += *add(choices);
+		total += add(choices);
 		cout << "The total price comes out to : $" << total << endl;
 		break;
 	case 4:
 		cout << "\nPlatinum selected\nThis package includes:\n*Deluxe Wash\n*Interior Vacumm\n*Coat Wax\n*Tire Shine\n*Complete Surface Protectant\n" << endl;
     out << "Platinum\t@$" << prices[0][3] << "\t\t$" << prices[0][3] * washes << endl;
 		total += prices[0][3] * washes;
-		total += *add(choices);
+		total += add(choices);
 		cout << "The total price comes out too : $" << total << endl;
 		break;
 	default:
@@ -216,9 +216,8 @@ void welcomePrompt(int *choice, double *washes)
 }
 
 // This function adds choices for additional prices to total
-double * add(int choices)
+double add(int choices)
 {
-  double *total;
 		while(true)
 		{
       switch(choices = showPrompt())
@@ -226,25 +225,25 @@ double * add(int choices)
         case 1: 
           cout << "'Air Freshner added'" << endl;
           cout << "An additional $1.50 will be charged." << endl;
-          *total += prices[1][0];
+          total += prices[1][0];
           addSer += prices[1][0];
           continue;
         case 2:
           cout << "'Tire Pump added'" << endl;
           cout << "An additional $5.00  will be charged\n" << endl;
-          *total += prices[1][1];
+          total += prices[1][1];
           addSer += prices[1][1];
           continue;
         case 3:
           cout << "'Rotation of Tires added'" << endl;
           cout << "An additional $10.00 will be charged\n" << endl;
-          *total += prices[1][2];
+          total += prices[1][2];
           addSer += prices[1][2];
           continue;
         case 4:
           cout << "'Oil Change added'" << endl;
           cout << "An additional $30.00 will be charged\n" << endl;
-          *total += prices[1][3];
+          total += prices[1][3];
           addSer += prices[1][3];
           continue;
         case 5:
@@ -253,5 +252,4 @@ double * add(int choices)
           cout << "Please enter a number 1 - 5\n";
       }
     }
-		return nullptr;
 }
